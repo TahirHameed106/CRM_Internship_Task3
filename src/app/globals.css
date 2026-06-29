@@ -1,26 +1,141 @@
+/* src/app/globals.css */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Design Tokens ─────────────────────────────────────────
+   60% → White / Light gray backgrounds (--bg, --bg-soft)
+   30% → Deep Navy (--navy) — text, sidebar, headings
+   10% → Violet accent (--accent) — buttons, highlights, badges
+──────────────────────────────────────────────────────────── */
+
+@theme {
+  /* 60% — Backgrounds */
+  --color-bg:          #F8F9FC;
+  --color-bg-soft:     #FFFFFF;
+  --color-bg-card:     #FFFFFF;
+  --color-border:      #E5E7EB;
+  --color-border-soft: #F3F4F6;
+
+  /* 30% — Navy (primary text + sidebar) */
+  --color-navy-900: #0F1629;
+  --color-navy-800: #1A2340;
+  --color-navy-700: #243057;
+  --color-navy-600: #2E3D6E;
+  --color-navy-500: #3B4D85;
+  --color-navy-400: #6B7DB3;
+  --color-navy-300: #9DAACE;
+  --color-navy-200: #C8D0E7;
+  --color-navy-100: #EEF1F8;
+
+  /* 10% — Violet accent */
+  --color-accent:       #6C63FF;
+  --color-accent-hover: #5B52E0;
+  --color-accent-soft:  #EEF0FF;
+  --color-accent-muted: #A09BFF;
+
+  /* Semantic */
+  --color-text:         #0F1629;
+  --color-text-muted:   #6B7280;
+  --color-text-soft:    #9CA3AF;
+  --color-success:      #10B981;
+  --color-warning:      #F59E0B;
+  --color-danger:       #EF4444;
+  --color-info:         #3B82F6;
+
+  /* Fonts */
+  --font-family-sans:    'Inter', system-ui, sans-serif;
+  --font-family-display: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Dark mode overrides ───────────────────────────────── */
+[data-theme="dark"] {
+  --color-bg:          #0F1629;
+  --color-bg-soft:     #1A2340;
+  --color-bg-card:     #1A2340;
+  --color-border:      #243057;
+  --color-border-soft: #1E2B4A;
+
+  --color-text:        #F1F5F9;
+  --color-text-muted:  #94A3B8;
+  --color-text-soft:   #64748B;
+
+  --color-accent-soft: #1E1B4B;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C8D0E7; border-radius: 99px; }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: #243057; }
+
+/* ── Utilities ─────────────────────────────────────────── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Animations ────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-up   { animation: fadeUp 0.4s ease both; }
+.animate-fade-in   { animation: fadeIn 0.3s ease both; }
+.animate-slide-in  { animation: slideInLeft 0.35s ease both; }
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ── Focus ring ────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #6C63FF;
+  outline-offset: 3px;
+  border-radius: 6px;
 }
