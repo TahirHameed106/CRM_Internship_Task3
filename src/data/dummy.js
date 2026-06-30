@@ -33,3 +33,22 @@ export const stageColor = {
   Negotiation: 'bg-orange-100 text-orange-700',
   Lost: 'bg-red-100 text-red-600',
 };
+
+export const salesChart = [
+  { month: 'Jan', value: 32 }, { month: 'Feb', value: 45 }, { month: 'Mar', value: 38 },
+  { month: 'Apr', value: 52 }, { month: 'May', value: 61 }, { month: 'Jun', value: 75 },
+];
+
+export const todaysMeetings = [
+  { id: 1, title: 'Product Demo — Nexora Pvt Ltd', time: '10:00 AM', with: 'Ayesha Khan' },
+  { id: 2, title: 'Contract Review', time: '1:30 PM', with: 'Usman Tariq' },
+  { id: 3, title: 'Onboarding Call', time: '4:00 PM', with: 'Omar Farooq' },
+];
+
+export const dashboardActivity = [
+  { text: 'New lead added: Faisal Rauf (GreenField Agro)', time: '12 min ago' },
+  { text: 'Deal closed with BrightWorks worth $21,000', time: '1 hour ago' },
+  { text: 'Task "Send proposal" marked complete', time: '3 hours ago' },
+  { text: 'Meeting scheduled with Crestline Co.', time: 'Yesterday' },
+  { text: 'New customer onboarded: Hamza Sheikh', time: 'Yesterday' },
+];
