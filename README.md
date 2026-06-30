@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Universal CRM Dashboard
+
+A responsive CRM dashboard UI built with Next.js and Tailwind CSS — manage customers, leads, employees, tasks, and meetings from one interface.
+
+## Tech Stack
+
+- Next.js 15 (App Router)
+- Tailwind CSS
+- Lucide React (icons)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
+```
+src/
+├── app/
+│   ├── login/                 Login page
+│   ├── forgot-password/       Forgot password page
+│   └── dashboard/             Dashboard + CRM pages (layout, customers, leads)
+├── components/                Sidebar, shared UI
+├── context/                   Theme (light/dark) provider
+└── data/                      Dummy data for UI
+```
+## Status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+UI-only build — no backend yet. Data is mocked in `src/data/dummy.js`.
 
-## Learn More
+- [x] Authentication (Login, Forgot Password)
+- [x] Dashboard Overview
+- [x] Customer List / Profile / Add Customer
+- [x] Lead Management / Add Lead
+- [ ] Employee List
+- [ ] Task Management
+- [ ] Meeting Scheduler & Calendar
+- [ ] Reports, Notifications, Settings, User Profile
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Student project — for learning purposes.
