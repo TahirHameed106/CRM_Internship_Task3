@@ -20,6 +20,34 @@ export const leads = [
   { id: 7, name: 'Imran Latif', company: 'Solstice Co.', source: 'Website', stage: 'Contacted', value: '$11,400', owner: 'John Doe', avatar: 'IL' },
 ];
 
+export const employees = [
+  { id: 1, name: 'John Doe', role: 'Sales Manager', dept: 'Sales', email: 'john@crm.com', phone: '+92 300 0000001', status: 'Active', avatar: 'JD', tasks: 5, joined: 'Jan 2024' },
+  { id: 2, name: 'Sana Tariq', role: 'Account Executive', dept: 'Sales', email: 'sana@crm.com', phone: '+92 300 0000002', status: 'Active', avatar: 'ST', tasks: 8, joined: 'Mar 2024' },
+  { id: 3, name: 'Ali Raza', role: 'UI/UX Designer', dept: 'Design', email: 'ali@crm.com', phone: '+92 300 0000003', status: 'On Leave', avatar: 'AR', tasks: 2, joined: 'Jun 2023' },
+  { id: 4, name: 'Maria Khan', role: 'Backend Developer', dept: 'Engineering', email: 'maria@crm.com', phone: '+92 300 0000004', status: 'Active', avatar: 'MK', tasks: 11, joined: 'Sep 2023' },
+  { id: 5, name: 'Zaid Hussain', role: 'Marketing Lead', dept: 'Marketing', email: 'zaid@crm.com', phone: '+92 300 0000005', status: 'Active', avatar: 'ZH', tasks: 6, joined: 'Nov 2023' },
+  { id: 6, name: 'Rabia Noor', role: 'Support Specialist', dept: 'Support', email: 'rabia@crm.com', phone: '+92 300 0000006', status: 'Inactive', avatar: 'RN', tasks: 0, joined: 'Feb 2024' },
+];
+
+export const tasks = [
+  { id: 1, title: 'Send proposal to Nexora Pvt Ltd', assignee: 'John Doe', priority: 'High', status: 'In Progress', due: 'Jul 2, 2026' },
+  { id: 2, title: 'Follow up with GreenField Agro lead', assignee: 'Sana Tariq', priority: 'Medium', status: 'Todo', due: 'Jul 3, 2026' },
+  { id: 3, title: 'Update customer contract — BrightWorks', assignee: 'John Doe', priority: 'High', status: 'Todo', due: 'Jul 4, 2026' },
+  { id: 4, title: 'Prepare Q2 sales report', assignee: 'Zaid Hussain', priority: 'Low', status: 'Done', due: 'Jun 30, 2026' },
+  { id: 5, title: 'Onboarding call with Orbit Labs', assignee: 'Sana Tariq', priority: 'Medium', status: 'Done', due: 'Jun 28, 2026' },
+  { id: 6, title: 'Fix CRM login redirect bug', assignee: 'Maria Khan', priority: 'High', status: 'In Progress', due: 'Jul 2, 2026' },
+  { id: 7, title: 'Design email campaign banner', assignee: 'Ali Raza', priority: 'Low', status: 'Todo', due: 'Jul 7, 2026' },
+];
+
+export const meetings = [
+  { id: 1, title: 'Product Demo — Nexora', date: 'Jul 1, 2026', time: '10:00 AM', with: 'Ayesha Khan', type: 'Demo', status: 'Upcoming' },
+  { id: 2, title: 'Contract Review', date: 'Jul 1, 2026', time: '1:30 PM', with: 'Usman Tariq', type: 'Internal', status: 'Upcoming' },
+  { id: 3, title: 'Onboarding Call', date: 'Jul 2, 2026', time: '4:00 PM', with: 'Omar Farooq', type: 'Onboarding', status: 'Upcoming' },
+  { id: 4, title: 'Q2 Sales Review', date: 'Jun 30, 2026', time: '11:00 AM', with: 'Sales Team', type: 'Internal', status: 'Completed' },
+  { id: 5, title: 'Lead Qualification Call', date: 'Jun 29, 2026', time: '3:00 PM', with: 'Faisal Rauf', type: 'Demo', status: 'Completed' },
+  { id: 6, title: 'Strategy Planning', date: 'Jul 5, 2026', time: '9:00 AM', with: 'Management', type: 'Internal', status: 'Upcoming' },
+];
+
 export const statusColor = {
   Active: 'bg-emerald-100 text-emerald-700',
   Inactive: 'bg-gray-200 text-gray-600',
